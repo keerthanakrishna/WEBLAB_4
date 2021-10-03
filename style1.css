@@ -1,0 +1,110 @@
+body{
+    
+    background-color: cadetblue;
+}
+.wrapper{max-width:90%; margin: 0 auto;}
+h1{text-align: center;margin: 30px;}
+table{margin-top:30px}
+.display-none{display: none;}
+tbody td{text-transform: uppercase;}
+.container{
+    background-image: url(download\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    margin-bottom: 10%;
+    margin-top:10% ;
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: cadetblue;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.cgpacalc_container{
+    height: auto;
+    width: 500px;
+  
+
+    border-radius: 5px;
+    color: black;
+}
+.cgpacalc_container > .cgpacalc_title{
+    height: 50px;
+    width: 50%;
+    text-align: center;
+    margin-left: 40%;
+    color: white;
+  
+ 
+}
+.cgpacalc_container > input{
+    height: 40px;
+    width: 50px;
+  
+    background-color:white;
+    color: grey;
+    border: 2px solid rgb(15, 15, 15);
+    border-radius: 5px;
+   margin-left: 15%;
+ 
+  
+}
+::placeholder{
+    color:gray;
+    font-size: 15px;
+}
+.cgpacalc_container .cgpacalc_output h3{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.cgpacalc_container .cgpacalc_output #res,.cgpacalc_container .cgpacalc_output #sub{
+    cursor: pointer;
+    
+}
+.cgpacalc_container .cgpacalc_output #res{
+
+    color: white;
+        
+}
+h3{
+    color: white;
+}
+
+label{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+nav{
+    font-size: 25px;
+   
+}
+li{
+    padding-left: 30px;
+    color: white;
+}
+.button button{
+    padding: 10px;
+    margin: 10px 110px;
+    font-size: 18px;
+    font-weight: 650;
+    color: aqua;
+    background-color: rgb(23, 24, 24);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    
+    box-shadow: 0 2px 4px rgba(224, 217, 217, 0.5);
+}
+.btn:hover{
+    background-color: rgb(235, 245, 235);
+    color: white;
+}
+.result{
+    margin-top: 25px; 
+    border:1px solid rgb(225,225,225);
+    padding: 15px;
+    border-radius: 25px;
+    text-align: center;
+}

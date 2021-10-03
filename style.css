@@ -1,0 +1,81 @@
+body{
+  background-color: cadetblue;
+}
+.wrapper{max-width:90%; margin: 0 auto;}
+h1{text-align: center;margin: 30px;}
+table{margin-top:30px;color: white;}
+.display-none{display: none;}
+tbody td{text-transform: uppercase;color: white;font-size: 25px;}
+.container{
+    background-image: url(download\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    margin-bottom: 10%;
+    margin-top:10% ;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    border-radius: 5%;
+    box-shadow: cadetblue;
+}
+.cgpacalc_container{
+    height: auto;
+    width: 500px;
+    text-align: center;
+
+    border-radius: 5px;
+    color: white;
+}
+.cgpacalc_container > .cgpacalc_title{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin-left: 10%;
+    color: white;
+  
+ 
+}
+.cgpacalc_container > input{
+    height: 40px;
+    width: 250px;
+    text-align: center;
+    background-color:white;
+    color: grey;
+    border: 2px solid rgb(15, 15, 15);
+    border-radius: 5px;
+   
+    margin-left: 25%;
+  
+}
+::placeholder{
+    color:gray;
+    font-size: 15px;
+}
+.cgpacalc_container .cgpacalc_output h3{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.cgpacalc_container .cgpacalc_output #res,.cgpacalc_container .cgpacalc_output #sub{
+    cursor: pointer;
+    
+}
+.cgpacalc_container .cgpacalc_output #res{
+    margin-left: 15px;
+    color: white;
+        
+}
+h3{
+    color: white;
+}
+label{
+    font-size: 25px;
+    color: white;
+   margin-right: 20%;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+nav{
+    font-size: 25px;
+   
+}
+li{
+    padding-left: 30px;
+    color: white;
+}

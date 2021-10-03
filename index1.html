@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+    <script src="https://kit.fontawesome.com/bb9893fd41.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  fixed-top navbar-dark" style="background-color: black;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images (1).jpg" style="width: 20%;"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fa fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index1.html">CGPA & GPA calculator</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index3.html">EB Bill calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index4.html">SI&CI calculator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container col-md-6 " style="box-shadow: 18px 18px 18px black;">
+    <div class="wrapper">
+        <h1 style="color: white;">GPA Calculator</h1>
+        <div class="form-row">
+            <div class="col">
+                <input id="course-code" class="form-control" type="text" placeholder="Course Code">
+            </div>
+            <div class="col">
+                <input id="Credits" class="form-control" type="number" placeholder="Credits" min="1" max="15">
+            </div>
+            <div class="col">
+                <select id="grade" class="form-control">
+                    <option value="">Grade</option>
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B</option>
+                    <option value="6">B+</option>
+                    <option value="5">RA</option>
+                </select>
+            </div>
+            <div class="col">
+                <input id="add" class="btn btn-primary" type="button" value="Add">
+
+            </div>
+        </div>
+        <table id="table" class="table table-bordered display-none">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Credits</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+        
+            </tbody>
+            <tfoot id="tfoot">
+        
+            </tfoot>
+        </table>
+        <div class="row">
+            <div class="col">
+                <input id="GPA" class="btn btn-success display-none" type="button" value="GPA">
+            </div>
+            <div class="col">
+            <input id="Reset" class="btn btn-warning display-none" type="button" value="Reset">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+
+    <div class="container col-md-6" style="box-shadow: 18px 18px 18px black;">
+        <div class="cgpacalc_container">
+            <div class="cgpacalc_title">
+                <h1 style="text-align: center;">CGPA Calculator</h1><br>
+            </div><br><br>
+            <form action="">
+                <div class="row mt-5">
+                    <div class="col-lg-5"></div>
+                    <div class="col-lg-2 text-center">
+                <div class="form-group">
+                    <select name="course1" id="cgpa1" class="form-control form-control-sm" onchange="cgpa()" required>
+                        <option value="" style="padding-right: 20px;">Choose the semester </option><span style="color: rgb(223, 213, 213);">*</span>
+                        <option value="1">Upto 1st sem</option>
+                        <option value="2">Upto 2nd sem</option>
+                        <option value="3">Upto 3rd sem</option>
+                        <option value="4">Upto 4th sem</option>
+                        <option value="5">Upto 5th sem</option>
+                        <option value="6">Upto 6th sem</option>
+                        <option value="7">Upto 7th sem</option>
+                        <option value="8">Upto 8th sem</option>
+                    </select>
+                </div>
+                </div>
+                <div class="col-lg-5"></div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col"></div>
+                    <div class="col">
+            <label  for="s1" id="1" style="margin-right: 10%;display: none;">SEM1</label>
+            <input type="text" id="s1" placeholder="Enter 1st Sem GPA"><br>
+            <label  for="s2"  id="2" style="margin-right: 10%;display: none;">SEM2</label>
+            <input type="text" id="s2" placeholder="Enter 2nd Sem GPA"><br>
+            <label  for="s3"  id="3" style="margin-right: 10%;display: none;">SEM3</label>
+            <input type="text" id="s3" placeholder="Enter 3rd Sem GPA"><br>
+            <label  for="s4"  id="4" style="margin-right: 10%;display: none;">SEM4</label>
+            <input type="text" id="s4" placeholder="Enter 4th Sem GPA"><br>
+            <label  for="s5"  id="5" style="margin-right: 10%;display: none;">SEM5</label>
+            <input type="text" id="s5" placeholder="Enter 5th Sem GPA"><br>
+            <label  for="s6"  id="6"style="margin-right: 10%;display: none;">SEM6</label>
+            <input type="text" id="s6" placeholder="Enter 6th Sem GPA"><br>
+            <label  for="s7"  id="7"style="margin-right: 10%;display: none;">SEM7</label>
+            <input type="text" id="s7" placeholder="Enter 7th Sem GPA"><br>
+            <label  for="s8"  id="8"style="margin-right: 10%;display: none;">SEM8</label>
+            <input type="text" id="s8" placeholder="Enter 8th Sem GPA"><br>
+          
+        </div>
+    </div>
+   
+</div>
+</form>
+<br><br>
+
+    <button type="button" style="margin-left: 40%;" onclick="cgpacalc()" class="btn btn-warning text-center">CALCULATE</button><br><br>
+
+    <br><br>
+   
+
+
+
+    <h5 class="text-center" style="color: white;font-size: 25px;" id="final"></h5>
+
+
+    <script src="index.js"></script>
+</div>
+  
+            <div class="col-lg-1"></div>
+        </div>
+    </div> -->
+    <script>
+         function cgpa()
+            {
+
+                var c=document.getElementById("cgpa1").selectedIndex;
+                if(c==1)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("1").style.display="block";
+                    document.getElementById("s2").style.display="none";
+                    document.getElementById("s3").style.display="none";
+                    document.getElementById("s4").style.display="none";
+                    document.getElementById("s5").style.display="none";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                }
+                else if(c==2)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("1").style.display="block";
+                    document.getElementById("2").style.display="block";
+                    document.getElementById("s3").style.display="none";
+                    document.getElementById("s4").style.display="none";
+                    document.getElementById("s5").style.display="none";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                }
+                else if(c==3)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="none";
+                    document.getElementById("1").style.display="block";
+                    document.getElementById("2").style.display="block";
+                    document.getElementById("3").style.display="block";
+                    document.getElementById("s5").style.display="none";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                   
+                }
+                else if(c==4)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="none";
+                    document.getElementById("1").style.display="block";
+                    document.getElementById("2").style.display="block";
+                    document.getElementById("3").style.display="block";
+                    document.getElementById("4").style.display="block";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                    
+                }
+                else if(c==5)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="block";
+                    document.getElementById("1").style.display="block";
+                    document.getElementById("2").style.display="block";
+                    document.getElementById("3").style.display="block";
+                    document.getElementById("4").style.display="block";
+                    document.getElementById("5").style.display="block";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                    
+                }
+                else if(c==6)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="block";
+                    document.getElementById("s6").style.display="block";
+                    document.getElementById("1").style.display="block";
+                    document.getElementById("2").style.display="block";
+                    document.getElementById("3").style.display="block";
+                    document.getElementById("4").style.display="block";
+                    document.getElementById("5").style.display="block";
+                    document.getElementById("6").style.display="block";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                    
+                }
+                else if(c==7)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="block";
+                    document.getElementById("s6").style.display="block";
+                    document.getElementById("s7").style.display="block";
+                    document.getElementById("1").style.display="block";
+                    document.getElementById("2").style.display="block";
+                    document.getElementById("3").style.display="block";
+                    document.getElementById("4").style.display="block";
+                    document.getElementById("5").style.display="block";
+                    document.getElementById("6").style.display="block";
+                    document.getElementById("7").style.display="block";
+                    document.getElementById("s8").style.display="none";
+
+                }
+                else
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="block";
+                    document.getElementById("s6").style.display="block";
+                    document.getElementById("s7").style.display="block";
+                    document.getElementById("s8").style.display="block";
+                    document.getElementById("1").style.display="block";
+                    document.getElementById("2").style.display="block";
+                    document.getElementById("3").style.display="block";
+                    document.getElementById("4").style.display="block";
+                    document.getElementById("5").style.display="block";
+                    document.getElementById("6").style.display="block";
+                    document.getElementById("7").style.display="block";
+                    document.getElementById("8").style.display="block";
+                }       
+            }
+
+            function cgpacalc(){
+                var c=document.getElementById("cgpa1").selectedIndex;
+                if(c==1)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var f1=cg1;
+                    document.getElementById("final").innerHTML="CGPA: " +f1+ "*";
+                }
+                else if(c==2)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var f22=parseFloat(cg1)+parseFloat(cg2);
+                    var f2=(f22/c).toFixed(2);
+                    document.getElementById("final").innerHTML="CGPA: " +f2+ "*";
+                }
+                else if(c==3)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var f33=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3);
+                    var f3=(f33/c).toFixed(2);
+                    document.getElementById("final").innerHTML="CGPA: " +f3+ "*";
+                }
+                else if(c==4)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var f44=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4);
+                    var f4=(f44/c).toFixed(2);
+                    document.getElementById("final").innerHTML="CGPA: " +f4+ "*";
+                }
+                else if(c==5)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var cg5=document.getElementById("s5").value;
+                    var f55=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4)+parseFloat(cg5);
+                    var f5=(f55/c).toFixed(2);
+                    document.getElementById("final").innerHTML="CGPA: " +f5+ "*";
+                }
+                else if(c==6)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var cg5=document.getElementById("s5").value;
+                    var cg6=document.getElementById("s6").value;
+                    var f66=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4)+parseFloat(cg5)+parseFloat(cg6);
+                    var f6=(f66/c).toFixed(2);
+                    document.getElementById("final").innerHTML="CGPA: " +f6+ "*";
+                }
+                else if(c==7)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var cg5=document.getElementById("s5").value;
+                    var cg6=document.getElementById("s6").value;
+                    var cg7=document.getElementById("s7").value;
+                    var f77=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4)+parseFloat(cg5)+parseFloat(cg6)+parseFloat(cg7);
+                    var f7=(f77/c).toFixed(2);
+                    document.getElementById("final").innerHTML="CGPA: " +f7+ "*";
+                }
+                else
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var cg5=document.getElementById("s5").value;
+                    var cg6=document.getElementById("s6").value;
+                    var cg7=document.getElementById("s7").value;
+                    var cg8=document.getElementById("s8").value;
+                    var f88=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4)+parseFloat(cg5)+parseFloat(cg6)+parseFloat(cg7)+parseFloat(cg8);
+                    var f8=(f88/c).toFixed(2);
+                    document.getElementById("final").innerHTML="CGPA: " +f8+ "*";
+                }
+
+            }
+            </script>
+      
+             
+
+    
+</body>
+</html>
